@@ -1,132 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Kalkulator Matriks untuk perkalian, determinan, invers">
-  <meta name="keywords" content="kalkulator, matriks, online, daring">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <title>Matriks</title>
-  <link rel="stylesheet" href="http://matriks.co.nf/a/milligram.css">
-  <link rel="stylesheet" href="http://matriks.co.nf/a/main.css">
-  <style type="text/css">
-html, body {
-  overflow-x: hidden;
-}
-.cat {
-  background: #309;
-  margin-bottom: 20px;
-}
-
-#canvas, #text {
-  display: block;
-  z-index: -1;
-}
-
-#text {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 100px;
-  z-index: 1;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyclop Adventures</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-  <noscript>Browser mu elek bro genti chrome utowo firefox</noscript>
-  <div class="con-tent">
-    <div class="line"></div>
-    <div class="cat">
-      <canvas id="canvas"></canvas>
-      <div id="text">
-        <h2 style="font-size: 80px; margin-bottom: 0;">Matriks</h2>
-        <p> Matematika itu menyenangkan, tapi susah</p>
-        <a href="https://build.phonegap.com/apps/3274975" class="button">Unduh versi mobile</a>
-      </div>
-    </div>
-    <div class="container">
-      <main class="row" style="margin-bottom: 20px;">
-
-        <div class="column left">
-          <h3 style="letter-spacing: 1px;">Cara Menghitung</h3>
-          <label style="margin-top: 20px;">Penjumlahan Matriks</label>
-          <a href="penjumlahan.html" class="button">Penjumlahan Matriks 2x2</a>
-          <label>Perkalian Matriks</label>
-          <a href="perkalian.html" class="button">Perkalian Matriks 2x2</a>
-          <a href="perkalian-3-2-x-2-3.html" class="button">3x2 kali 2x3</a>
-          <a href="perkalian-2-3-x-3-2.html" class="button">2x3 kali 3x2</a>
-          <label>Determinan Matriks</label>
-          <a href="determinan-2.html" class="button">Determinan Matriks 2x2</a>
-          <a href="determinan-3.html" class="button">Determinan Matriks 3x3</a>
-          <label>Invers Matriks</label>
-          <a href="invers.html" class="button">Invers Matriks 2x2</a>
-          <label>Menu Spesial</label>
-          <a href="awor/" class="button" style="background: #909">Awor!</a>
-        </div>
-        <div class="column">
-          <div class="box">
-            <h3 style="letter-spacing: 1px;">Pengertian</h3>
-            <p style="margin-top: 20px;"><b>matriks</b> adalah susunan bilangan, simbol, atau ekspresi, yang disusun dalam baris dan kolom sehingga membentuk suatu bangun persegi. Matriks seperti halnya variabel biasa dapat dimanipulasi, seperti dikalikan, dijumlah, dikurangkan dan didekomposisikan.</p>
-          </div>
-          <div>
-            <div class="box" style="padding: 20px; border-left: 7px solid #be89ff; margin-bottom: 20px;">
-              <h3>Tentang Kami</h3>
-              <p style="margin-top: 20px;">Dalam rangka memenuhi tugas akhir kerja proyek kami <b><a href="http://wachd.github.io">Noor Wachid</a></b> dan <b><a href="http://ramaesajuia.github.io">Ramaesa Juia</a></b> membuat sebuah program web dari JavaScript untuk menghitung matriks.</p>
+    <main id="wrapper">
+        <section id="background"><canvas id="theCanvas"></canvas></section>
+        <section id="foreground">
+            <div id="box">
+                <h1 id="title">Cyclop Adventures</h1>
+                <p id="line"></p>
+                <p id="tagline">Sebuah Game petualangan yang dibuat oleh Andita Pratama, Arya Solikul Huda, & Muhammad Arif Fadli.</p>
+                <div id="button">
+                    <button><a href="https://">Download for Android</a></button>
+                    <button><a href="https://">Download for IOS</a></button>
+                    <button><a href="https://">Play on Browser</a></button>
+                </div>
             </div>
-            <div>
-              <h3>Catatan Perubahan</h3>
-              <p>
-                <ul>
-                  <li>
-                    <b>Juli 26, 2018</b>
-                    <br> - Hosting di Surge.sh.
-                    <br> - Mengatur hal dasar.
-                  </li>
-                  <li>
-                    <b>Agustus 6, 2018</b>
-                    <br> - Pindah dari Surge.sh ke Co.nf.
-                  </li>
-                  <li>
-                    <b>Agustus 24, 2018</b>
-                    <br> - Menambah menu awor!.
-                  </li>
-                  <li>
-                    <b>September 7, 2018</b>
-                    <br> - Menambah pilihan (a, b, c, d, e) pada awor!.
-                    <br> - Merubah tampilan awor dari satu kolom ke 5 kolom.
-                  </li>
-                  <li>
-                    <b>September 14, 2018</b>
-                    <br> - Menambah menu perkalian 3x2 kali 2x3 dan 2x3 kali 3x2.
-                  </li>
-                  <li>
-                    <b>September 17, 2018</b>
-                    <br> - Merubah ukuran input table.
-                    <br> - Memberi tanda kurung '()' agar lebih mudah dibaca.
-                  </li>
-                </ul>
-              </p>
-            </div>  
-          </div>
-        </div>
-      </main>
-    </div>
-  </div>
-  <footer>
-    <div style="line-height: 50px; color: #ccc;"><a href="http://wachd.github.io" style="color: #ccc;"">Noor Wachid</a> & <a href="http://ramaesajuia.github.io" style="color: #ccc;"">Ramaesa Juia</a></div>
-    <div style="font-size: 12px; line-height: 20px; color: #aaa;">Copyright &copy; 2018 All rights reserved</div>
-    <div style="font-size: 12px; line-height: 20px; color: #aaa;">lots of <b style="color: pink">love</b> from us, have a nice time with Math</div>
-    <div></div>
-  </footer>
-  <script type="text/javascript" src="http://matriks.co.nf/a/canvas.js"></script>
+        </section>
+    </main>
+    <footer>
+        <!-- hapus bagian ini haram hukumnya -->
+        <p id="info">This landing page was designed by <a href="https://wachd.github.io">Noor Wachid</a>.</p>
+        <p>&copy; <span id="year"></span> github.io</p>
+        <p id="important"></p>
+    </footer>
+    <script src="app.js"></script>
 </body>
+</html>

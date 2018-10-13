@@ -1,1 +1,0 @@
-# anditapratama.github.io

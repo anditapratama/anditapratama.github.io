@@ -3,8 +3,8 @@ var ctx = c.getContext("2d");
 
 function resize() {
     var box = c.getBoundingClientRect();
-    c.width = box.width;
-    c.height = box.height;
+    c.width = window.innerWidth;
+    c.height = window.innerHeight;
 }
 
 var light = {
